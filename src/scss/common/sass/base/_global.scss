@@ -1,0 +1,137 @@
+.aiba-app {
+  background-color: var(--aiba-app-bg-color);
+  font-family: var(--aiba-theme-primary-font-family);
+  @include font-size('label-sm');
+
+  * {
+    box-sizing: border-box;
+  }
+}
+a,
+.link {
+  color: var(--aiba-theme-link-color);
+  &:hover {
+    color: var(--aiba-theme-link-hover-color);
+  }
+}
+img {
+  max-width: 100%;
+  outline: none;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.cjk {
+  overflow: visible;
+  white-space: normal;
+  word-break: keep-all;
+}
+
+.external_link {
+  height: 16px;
+  width: 16px;
+  margin: 0 2px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  padding: 0;
+}
+h1,
+.c-text-heading-1 {
+  @include font-size('h1-xs');
+  @media (--mq-md) {
+    @include font-size('h1-md');
+  }
+}
+
+h2,
+.c-text-heading-2 {
+  @include font-size('h2-md');
+  @media (--mq-md) {
+    @include font-size('h2-md');
+  }
+}
+h3,
+.c-text-heading-3 {
+  @include font-size('h3-xs');
+  @media (--mq-md) {
+    @include font-size('h1-md');
+  }
+}
+h4,
+.c-text-heading-4 {
+  @include font-size('h4-xs');
+}
+
+.c-text-default {
+  @include font-size('default');
+}
+
+p {
+  strong {
+    font-weight: bold;
+  }
+}
+.container {
+  padding: 0 $gutter-xs * 2;
+  width: 100%;
+  margin: 0 auto;
+
+  @media (--mq-xs) {
+    max-width: $container-sm;
+  }
+
+  @media (--mq-sm) {
+    max-width: $container-sm;
+  }
+
+  @media (--mq-md) {
+    max-width: $container-md;
+    padding: 0 $gutter-xs;
+  }
+
+  @media (--mq-lg) {
+    max-width: $container-lg;
+    padding: 0 $gutter-lg;
+  }
+
+  &-fluid {
+    padding: 0 $gutter-xs;
+    max-width: none;
+    width: 100%;
+    @media (--mq-lg) {
+      padding: 0 $gutter-lg;
+    }
+  }
+}
+.row {
+  @media (--mq-lg) {
+    margin: 0 (-$gutter-lg);
+  }
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 (-$gutter-xs);
+
+  &.row-nowrap {
+    flex-wrap: nowrap;
+  }
+}
+input,
+select,
+textarea {
+  @include font-size('label-sm');
+}

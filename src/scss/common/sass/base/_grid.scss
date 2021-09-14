@@ -1,0 +1,24 @@
+@each $size in $device-size {
+  @if $size == 'xs' {
+    @for $i from 1 through 4 {
+      .col-#{$i} {
+        width: percentage($i / $grid-columns-xs);
+        padding: 0 $gutter-xs;
+      }
+    }
+  } @else {
+    @media (--mq-#{$size}) {
+      @for $i from 1 through 12 {
+        .col-#{$size}-#{$i} {
+          width: percentage($i / $grid-columns);
+          /* stylelint-disable max-nesting-depth */
+          @if $size == lg {
+            padding: 0 $gutter-lg;
+          } @else {
+            padding: 0 $gutter-xs;
+          }
+        }
+      }
+    }
+  }
+}

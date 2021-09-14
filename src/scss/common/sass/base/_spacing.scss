@@ -1,0 +1,21 @@
+$gaps: m, mt, mb, p, pt, pb;
+
+@each $gap in $gaps {
+  @for $i from 0 through 6 {
+    .#{$gap}-#{(5 * $i)} {
+      @if $gap == m {
+        margin: (5 * $i) * 1px;
+      } @else if $gap == mt {
+        margin-top: (5 * $i) * 1px;
+      } @else if $gap == mb {
+        margin-bottom: (5 * $i) * 1px;
+      } @else if $gap == p {
+        padding: (5 * $i) * 1px;
+      } @else if $gap == pt {
+        padding-top: (5 * $i) * 1px;
+      } @else if $gap == pb {
+        padding-bottom: (5 * $i) * 1px;
+      }
+    }
+  }
+}
