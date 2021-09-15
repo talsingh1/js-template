@@ -1,0 +1,237 @@
+@custom-media --mq-xs (min-width: 36em);
+@custom-media --mq-sm (min-width: 48em);
+@custom-media --mq-md (min-width: 62em);
+@custom-media --mq-lg (min-width: 75em);
+@custom-media --mq-xlg (min-width: 118em);
+@custom-media --maxq-sm (max-width: 47.93em);
+:root { --aiba-theme-bg-color: #F5D5D6; --aiba-theme-color-transparent: transparent; --aiba-theme-primary-color: #fff; --aiba-theme-link-color: #0d6efd; --aiba-theme-link-hover-color: #0a58ca; --aiba-theme-primary-font-color: #213A7A; --aiba-theme-primary-font-family: Helvetica Neue, arial, sans-serif; --aiba-theme-secondary-font-family: Arial, Helvetica, sans-serif; --aiba-theme-primary-btn-bg-color: #213A7A; --aiba-theme-primary-btn-border-color: #213A7A; --aiba-theme-primary-btn-text-color: #ffffff; --aiba-theme-disabled-btn-text-color: #FFFFFF; --aiba-theme-secondary-btn-bg-color: #ffffff; --aiba-theme-secondary-btn-border-color: #ffffff; --aiba-theme-secondary-btn-text-color: #213A7A; --aiba-theme-disabled-btn-bg-color: #CCCCCC; --aiba-theme-error-msg-color: #842029; --aiba-theme-success-msg-color: #0f5132; --aiba-theme-info-msg-color: #055160; --aiba-theme-warning-msg-color: #664d03; --aiba-theme-error-msg-bg-color: #f8d7da; --aiba-theme-success-msg-bg-color: #d1e7dd; --aiba-theme-info-msg-bg-color: #cff4fc; --aiba-theme-warning-msg-bg-color: #fff3cd; --aiba-theme-error-msg-border-color: #f5c2c7; --aiba-theme-success-msg-border-color: #badbcc; --aiba-theme-info-msg-border-color: #b6effb; --aiba-theme-warning-msg-border-color: #ffecb5; --aiba-theme-traffic-light-error-color: #e91b2d; --aiba-theme-traffic-light-success-color: #1fcc7b; --aiba-theme-traffic-light-warning-color: #ddbb55; --aiba-theme-bubble-chart-outer-bg-color: #f3e9e2; --aiba-theme-bubble-chart-inner-bg-color: #d7c6e6; --aiba-theme-bubble-chart-text-color: #2b2b2b; --aiba-f-text-color-white: #ffffff; --aiba-f-weight-light: 300; --aiba-f-weight-regular: 400; --aiba-f-weight-medium: 500; --aiba-f-weight-semibold: 600; --aiba-f-weight-bold: 700; --aiba-breakpoint-0: 576px; --aiba-breakpoint-1: 768px; --aiba-breakpoint-2: 992px; --aiba-breakpoint-3: 1200px; --aiba-c-gray-10: #e4e4e4; --aiba-c-gray-20: #c8c8c8; --aiba-c-gray-30: #aeaeae; --aiba-c-gray-60:  #6d6d6d; --aiba-c-gray-70:  #6A6F71; --aiba-c-bg-color-light: #FEFEFE; --aiba-c-bg-color-light-gray: #EFEFEF; --aiba-c-bg-color-blue: #213A7A; --aiba-c-bg-color-dark: #CCCCCC; --aiba-c-border-color-dark: #CCCCCC; --aiba-c-brown-10: #80392D; --aiba-c-color-white: #FFFFFF; --aiba-c-color-red: #dc3545; --aiba-app-bg-color: #fff; --aiba-app-bg-dual-color: linear-gradient(white 54%, #213a7a 46%); --aiba-theme-progressbar-bg: #f3e9e2; --aiba-theme-progresbar-compare-color: #af9ecd; --aiba-theme-progresbar-compare-light-color: #d7c6e6; }
+
+@custom-media --mq-xs (min-width: 36em);
+@custom-media --mq-sm (min-width: 48em);
+@custom-media --mq-md (min-width: 62em);
+@custom-media --mq-lg (min-width: 75em);
+@custom-media --mq-xlg (min-width: 118em);
+@custom-media --maxq-sm (max-width: 47.93em);
+html { line-height: 1.15; -webkit-text-size-adjust: 100%; /* stylelint-disable-line property-no-vendor-prefix */ }
+
+body { margin: 0; }
+
+/** Render the `main` element consistently in IE. */
+main { display: block; }
+
+/** Correct the font size and margin on `h1` elements within `section` and `article` contexts in Chrome, Firefox, and Safari. */
+h1 { font-size: 2em; margin: 0.67em 0; }
+
+/** 1. Add the correct box sizing in Firefox. 2. Show the overflow in Edge and IE. */
+hr { box-sizing: content-box; height: 0; overflow: visible; }
+
+/** 1. Correct the inheritance and scaling of font size in all browsers. 2. Correct the odd `em` font sizing in all browsers. */
+pre { font-family: monospace, serif; font-size: 1em; }
+
+/** Remove the gray background on active links in IE 10. */
+a { background-color: transparent; }
+
+/** 1. Remove the bottom border in Chrome 57- 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari. */
+abbr[title] { border-bottom: none; text-decoration: underline dotted; }
+
+/** Add the correct font weight in Chrome, Edge, and Safari. */
+b, strong { font-weight: bolder; }
+
+/** 1. Correct the inheritance and scaling of font size in all browsers. 2. Correct the odd `em` font sizing in all browsers. */
+code, kbd, samp { font-family: monospace, serif; font-size: 1em; }
+
+/** Add the correct font size in all browsers. */
+small { font-size: 80%; }
+
+/** Prevent `sub` and `sup` elements from affecting the line height in all browsers. */
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+
+sub { bottom: -0.25em; }
+
+sup { top: -0.5em; }
+
+/** Remove the border on images inside links in IE 10. */
+img { border-style: none; }
+
+/** 1. Change the font styles in all browsers. 2. Remove the margin in Firefox and Safari. */
+button, input, optgroup, select, textarea { font-family: inherit; font-size: 100%; line-height: 1.15; margin: 0; }
+
+/** Show the overflow in IE. 1. Show the overflow in Edge. */
+button, input { overflow: visible; }
+
+/** Remove the inheritance of text transform in Edge, Firefox, and IE. 1. Remove the inheritance of text transform in Firefox. */
+button, select { text-transform: none; }
+
+/** Correct the inability to style clickable types in iOS and Safari. */
+button, [type='button'], [type='reset'], [type='submit'] { appearance: button; }
+
+/** Remove the inner border and padding in Firefox. */
+button::-moz-focus-inner, [type='button']::-moz-focus-inner, [type='reset']::-moz-focus-inner, [type='submit']::-moz-focus-inner { border-style: none; padding: 0; }
+
+/** Restore the focus styles unset by the previous rule. */
+button:-moz-focusring, [type='button']:-moz-focusring, [type='reset']:-moz-focusring, [type='submit']:-moz-focusring { outline: 1px dotted ButtonText; }
+
+/** Correct the padding in Firefox. */
+fieldset { padding: 0.35em 0.75em 0.625em; }
+
+/** 1. Correct the text wrapping in Edge and IE. 2. Correct the color inheritance from `fieldset` elements in IE. 3. Remove the padding so developers are not caught out when they zero out `fieldset` elements in all browsers. */
+legend { box-sizing: border-box; color: inherit; display: table; max-width: 100%; padding: 0; white-space: normal; }
+
+/** Add the correct vertical alignment in Chrome, Firefox, and Opera. */
+progress { vertical-align: baseline; }
+
+/** Remove the default vertical scrollbar in IE 10+. */
+textarea { overflow: auto; }
+
+/** 1. Add the correct box sizing in IE 10. 2. Remove the padding in IE 10. */
+[type='checkbox'], [type='radio'] { box-sizing: border-box; padding: 0; }
+
+/** Correct the cursor style of increment and decrement buttons in Chrome. */
+[type='number']::-webkit-inner-spin-button, [type='number']::-webkit-outer-spin-button { height: auto; }
+
+/** 1. Correct the odd appearance in Chrome and Safari. 2. Correct the outline style in Safari. */
+[type='search'] { appearance: textfield; outline-offset: -2px; }
+
+/** Remove the inner padding in Chrome and Safari on macOS. */
+[type='search']::-webkit-search-decoration { appearance: none; }
+
+/** 1. Correct the inability to style clickable types in iOS and Safari. 2. Change font properties to `inherit` in Safari. */
+::-webkit-file-upload-button { appearance: button; font: inherit; }
+
+/* Add the correct display in Edge, IE 10+, and Firefox. */
+details { display: block; }
+
+/* Add the correct display in all browsers. */
+summary { display: list-item; }
+
+/** Add the correct display in IE 10+. */
+template { display: none; }
+
+/** Add the correct display in IE 10. */
+.m-0 { margin: 0px; }
+
+.m-5 { margin: 5px; }
+
+.m-10 { margin: 10px; }
+
+.m-15 { margin: 15px; }
+
+.m-20 { margin: 20px; }
+
+.m-25 { margin: 25px; }
+
+.m-30 { margin: 30px; }
+
+.mt-0 { margin-top: 0px; }
+
+.mt-5 { margin-top: 5px; }
+
+.mt-10 { margin-top: 10px; }
+
+.mt-15 { margin-top: 15px; }
+
+.mt-20 { margin-top: 20px; }
+
+.mt-25 { margin-top: 25px; }
+
+.mt-30 { margin-top: 30px; }
+
+.mb-0 { margin-bottom: 0px; }
+
+.mb-5 { margin-bottom: 5px; }
+
+.mb-10 { margin-bottom: 10px; }
+
+.mb-15 { margin-bottom: 15px; }
+
+.mb-20 { margin-bottom: 20px; }
+
+.mb-25 { margin-bottom: 25px; }
+
+.mb-30 { margin-bottom: 30px; }
+
+.p-0 { padding: 0px; }
+
+.p-5 { padding: 5px; }
+
+.p-10 { padding: 10px; }
+
+.p-15 { padding: 15px; }
+
+.p-20 { padding: 20px; }
+
+.p-25 { padding: 25px; }
+
+.p-30 { padding: 30px; }
+
+.pt-0 { padding-top: 0px; }
+
+.pt-5 { padding-top: 5px; }
+
+.pt-10 { padding-top: 10px; }
+
+.pt-15 { padding-top: 15px; }
+
+.pt-20 { padding-top: 20px; }
+
+.pt-25 { padding-top: 25px; }
+
+.pt-30 { padding-top: 30px; }
+
+.pb-0 { padding-bottom: 0px; }
+
+.pb-5 { padding-bottom: 5px; }
+
+.pb-10 { padding-bottom: 10px; }
+
+.pb-15 { padding-bottom: 15px; }
+
+.pb-20 { padding-bottom: 20px; }
+
+.pb-25 { padding-bottom: 25px; }
+
+.pb-30 { padding-bottom: 30px; }
+
+h1, h2, h3, h4, h5 { margin: 0; padding: 0; }
+
+h1, .c-text-heading-1 { font-size: 28px; line-height: 1.35; }
+
+@media (--mq-md) { h1, .c-text-heading-1 { font-size: 36px; line-height: 1.16; } }
+
+h2, .c-text-heading-2 { font-size: 22px; line-height: 1.27; }
+
+@media (--mq-md) { h2, .c-text-heading-2 { font-size: 22px; line-height: 1.27; } }
+
+h3, .c-text-heading-3 { font-size: 18px; line-height: 1.17; }
+
+@media (--mq-md) { h3, .c-text-heading-3 { font-size: 36px; line-height: 1.16; } }
+
+h4, .c-text-heading-4 { font-size: 20px; line-height: 1.5; }
+
+.c-text-default { font-size: 26px; line-height: 32px; }
+
+p strong { font-weight: bold; }
+
+.container { padding: 0 16px; width: 100%; margin: 0 auto; }
+
+@media (--mq-xs) { .container { max-width: 736px; } }
+
+@media (--mq-sm) { .container { max-width: 736px; } }
+
+@media (--mq-md) { .container { max-width: 960px; padding: 0 8px; } }
+
+@media (--mq-lg) { .container { max-width: 1176px; padding: 0 10px; } }
+
+.container-fluid { padding: 0 8px; max-width: none; width: 100%; }
+
+@media (--mq-lg) { .container-fluid { padding: 0 10px; } }
+
+.row { display: flex; flex-wrap: wrap; margin: 0 -8px; }
+
+@media (--mq-lg) { .row { margin: 0 -10px; } }
+
+.row.row-nowrap { flex-wrap: nowrap; }
+
+input, select, textarea { font-size: 16px; line-height: 1.2; }
+
+/*# sourceMappingURL=app.css.map */
