@@ -1,3 +1,0 @@
-@mixin theme_var($property, $variable) {
-  #{$property}: var(--#{$variable});
-}

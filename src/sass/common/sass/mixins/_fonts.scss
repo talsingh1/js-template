@@ -1,4 +1,0 @@
-@mixin font-size($property) {
-  font-size: map-deep-get($fonts, $property, 'font');
-  line-height: map-deep-get($fonts, $property, 'lh');
-}
